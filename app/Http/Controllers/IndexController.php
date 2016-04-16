@@ -12,7 +12,7 @@ class IndexController extends BaseController
 
     public function login(Request $request)
     {
-        $mobile = $request->session()->get('oauth_mobile');
+        $mobile = $request->session()->get('auth_mobile');
         if ($mobile)
         {
             $info = unserialize($mobile);
@@ -40,7 +40,7 @@ class IndexController extends BaseController
             ->first();
         if ($row)
         {
-            $request->session()->set('mobile', serialize($row));
+            $request->session()->set('auth_mobile', serialize($row));
             return redirect('/list');
         }
 
