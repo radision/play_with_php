@@ -13,3 +13,8 @@
 
 Route::get('/', 'IndexController@login');
 Route::post('/', 'IndexController@verify');
+
+Route::get('/list/{id}', 'MessageController@detail');
+Route::post('/post/{id?}', 'MessageController@post');
+
+Route::get('/list', 'MessageController@index');

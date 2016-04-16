@@ -12,6 +12,7 @@
           <div class="panel-heading">登录</div>
           <div class="panel-body">
             <form method="post" class="form-inline" action="/">
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
               <div class="form-group">
                 <label class="sr-only" for="user_mobile">手机号</label>
                 <input type="text" class="form-control" id="user_mobile" name="mobile" placeholder="手机号">
