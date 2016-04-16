@@ -14,4 +14,9 @@ class IndexController extends BaseController
         return view('user.login');
     }
 
+    public function verify(Request $request)
+    {
+
+    }
+
 }

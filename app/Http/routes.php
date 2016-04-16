@@ -12,3 +12,4 @@
 */
 
 Route::get('/', 'IndexController@login');
+Route::post('/', 'IndexController@verify');
