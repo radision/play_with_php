@@ -53,7 +53,7 @@ class MessageController extends BaseController
         $from_mobile_id = $info->id;
 
         $mobile = intval($request->input('mobile'));
-        $content = intval($request->input('content'));
+        $content = trim($request->input('content'));
 
         $row = DB::table('mobile')
             ->where('mobile', '=', $mobile)
